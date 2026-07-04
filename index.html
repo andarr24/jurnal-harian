@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jurnal Harian 3D</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Nunito+Sans:wght@300;400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ============================================================
+    MAIN STAGE
+    ============================================================ -->
+    <div class="stage">
+        <div class="book" id="book">
+
+            <!-- COVER -->
+            <div class="cover" id="cover">
+                <div class="decoration"></div>
+                <div class="emblem">
+                    Jurnal Harian
+                    <span>— catatan jiwa —</span>
+                </div>
+                <div class="hint">✦ Ketuk untuk membuka ✦</div>
+            </div>
+
+            <!-- PAGES -->
+            <div class="pages">
+                <div class="spine" aria-hidden="true"></div>
+
+                <!-- LEFT PAGE: DAFTAR ISI -->
+                <div class="page-left">
+                    <h2>📖 Daftar Isi</h2>
+                    <div class="sub" id="entryCountText">0 catatan</div>
+
+                    <button class="new-entry-btn" id="newEntryBtn">✧ Tulis Catatan Baru</button>
+                    <div id="tocList">
+                        <div class="empty-toc">
+                            <span class="icon">📝</span>
+                            Belum ada catatan.<br>Mulai tulis yang pertama!
+                        </div>
+                    </div>
+
+                    <div class="mood-stats">
+                        <div class="sub">🎯 Suasana hati</div>
+                        <div class="mood-bar" id="moodBar">
+                            <span style="background:var(--page-line);flex:1;height:10px;border-radius:3px;"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT PAGE: KONTEN -->
+                <div class="page-right">
+                    <div class="page-content" id="pageContent">
+                        <div class="no-entry">
+                            <div class="icon">📖</div>
+                            <h2>Halaman kosong</h2>
+                            <p>Pilih catatan dari daftar isi,<br>atau tulis yang baru.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    NAVIGATION
+    ============================================================ -->
+    <div class="nav-arrows">
+        <button id="prevBtn" disabled>‹ Sebelumnya</button>
+        <span class="counter" id="navCounter">—</span>
+        <button id="nextBtn" disabled>Selanjutnya ›</button>
+    </div>
+
+    <div class="stats-footer" id="statsFooter">✦ total catatan: 0 ✦</div>
+
+    <!-- ============================================================
+    TOAST
+    ============================================================ -->
+    <div class="toast" id="toast"></div>
+
+    <!-- ============================================================
+    JAVASCRIPT
+    ============================================================ -->
+    <script src="script.js"></script>
+</body>
+</html>
